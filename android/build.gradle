@@ -16,6 +16,7 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        maven { url 'https://maven.faceunity.com/repository/maven-public/' }
         google()
         jcenter()
     }
@@ -51,4 +52,5 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation project(path: ':faceunity_plugin')
 }
