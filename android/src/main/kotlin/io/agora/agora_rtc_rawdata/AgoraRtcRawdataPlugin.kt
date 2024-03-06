@@ -90,7 +90,10 @@ class AgoraRtcRawdataPlugin : FlutterPlugin, MethodCallHandler {
             }
 
             "registerVideoFrameObserver" -> {
+                println("registerVideoFrameObserver")
+                println("registerVideoFrameObserver $videoObserver")
                 if (videoObserver == null) {
+                println("registerVideoFrameObserver $videoObserver")
                     videoObserver =
                         object : IVideoFrameObserver((call.arguments as Number).toLong()) {
                             private var oldRotation = 0
